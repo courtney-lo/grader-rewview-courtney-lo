@@ -32,12 +32,14 @@ cd student-submission
 
 if [[ -e ListExamples.java ]]
 then
-    echo "FIle is existed"
+    echo "File exists"
 else 
-    "File is not existed"
+    "File does not exist"
 fi
 
-cd..
+mkdir Test-Student
+cp $file ./Test-Student
+cp TestListExamples.java ./Test-Student
 
 cp student-submission/ListExamples.java ./
 javac -cp $CPATH *.java
